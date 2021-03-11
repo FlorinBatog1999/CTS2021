@@ -10,10 +10,11 @@ import ro.ase.cts.clase.Aplicant;
 import ro.ase.cts.clase.Elev;
 
 public class PupilReader extends Reader {
-	
+	//Putem avea utrmatoarea problema: un PupilReader sa citeasca dintr-un fisier in care sunt angajati.
+	//Pentru a evita acest lucru, creem un atribut care va reprezenta fisierul din care citim si constructorul clasei Reader.
+	//Vom mosteni clasa Reader
 	public PupilReader(String fileName) {
 		super(fileName);
-		// TODO Auto-generated constructor stub
 	}
 
 	public List<Aplicant> readApplicants() throws FileNotFoundException {
@@ -22,17 +23,11 @@ public class PupilReader extends Reader {
 		List<Aplicant> elevi = new ArrayList<Aplicant>();
 
 		while (input2.hasNext()) {
-			String nume = input2.next();
-			String prenume = input2.next();
-			int varsta = input2.nextInt();
-			int punctaj = input2.nextInt();
-			int nr = input2.nextInt();
-			String[] vect = new String[5];
-			for (int i = 0; i < nr; i++)
-				vect[i] = input2.next();
+			Elev e=new Elev();
+			super.readAplicant(input2, e);
 			int clasa = input2.nextInt();
 			String tutore = input2.next();
-			Elev e = new Elev(nume, prenume, varsta, punctaj, nr, vect, clasa, tutore);
+			e.setClasa(clasa);
 			elevi.add(e);
 		}
 
