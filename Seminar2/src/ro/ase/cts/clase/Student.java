@@ -1,55 +1,58 @@
 package ro.ase.cts.clase;
 
-import java.util.Arrays;
-
 public class Student extends Aplicant {
 	protected String facultate;
-	protected int an_studii;
-	private static float sumaFinantata=20;
-	
+	protected int anStudii;
+	private static float sumaFinantata = 20;
+
 	public String getFacultate() {
 		return facultate;
 	}
+
 	public void setFacultate(String facultate) {
 		this.facultate = facultate;
 	}
-	public int getAn_studii() {
-		return an_studii;
-	}
-	public void setAn_studii(int an_studii) {
-		this.an_studii = an_studii;
+
+	public int getAnStudii() {
+		return anStudii;
 	}
 
+	public void setAnStudii(int anStudii) {
+		this.anStudii = anStudii;
+	}
 
 	public Student() {
 		super();
-		
+
 	}
-	
-	public Student(String nume, String prenume, int varsta, int punctaj, int nr_proiecte, String[] denumireProiect, String facultate, int an_studii) {
-		super(nume,prenume,varsta,punctaj,nr_proiecte,denumireProiect);
+
+	public Student(String nume, String prenume, int varsta, int punctaj, int numarProiecte, String[] denumireProiect,
+			String facultate, int anStudii) {
+		super(nume, prenume, varsta, punctaj, numarProiecte, denumireProiect);
 		this.facultate = facultate;
-		this.an_studii = an_studii;
+		this.anStudii = anStudii;
 	}
+
 	@Override
 	public String toString() {
-		StringBuilder str=new StringBuilder("Student:");
-		str.append(super.toString());
-		str.append(", facultate").append(facultate).append(", an studii ").append(String.valueOf(an_studii));
-		return str.toString();	}
-	
+		StringBuilder stringBuilderStudent = new StringBuilder("Student:");
+		stringBuilderStudent.append(super.toString());
+		stringBuilderStudent.append(", facultate").append(facultate).append(", an studii ")
+				.append(String.valueOf(anStudii));
+		return stringBuilderStudent.toString();
+	}
+
 	@Override
 	public float getSumaFinantata() {
-		//System.out.println("Studentul "+getNume()+" "+getPrenume()+" primeste"+s+" Euro/zi in proiect.");
 		return sumaFinantata;
 	}
 
 	public static float getFinantare() {
-		//System.out.println("Studentul "+getNume()+" "+getPrenume()+" primeste"+s+" Euro/zi in proiect.");
 		return sumaFinantata;
 	}
+
 	public static void setFinantare(float sumaFinantata) {
 		Student.sumaFinantata = sumaFinantata;
 	}
-	
+
 }

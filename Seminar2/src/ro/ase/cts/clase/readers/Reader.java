@@ -5,20 +5,18 @@ import java.util.List;
 import java.util.Scanner;
 
 import ro.ase.cts.clase.Aplicant;
-//clasa abstracta Reader permite citirea din fisier a unui elev, student sau angajat in functie de clasele StudentReader,
-//PupilReader, AngajatReader. 
+
 public abstract class Reader {
-	
+
 	protected String FileName;
 
 	public Reader(String fileName) {
 		super();
 		this.FileName = fileName;
 	}
-	
+
 	public abstract List<Aplicant> readApplicants() throws FileNotFoundException;
 
-	//nu e nevoie sa 
 	public void readAplicant(Scanner input, Aplicant aplicant) {
 		String nume = input.next();
 		String prenume = (input.next()).toString();
@@ -33,7 +31,5 @@ public abstract class Reader {
 		aplicant.setVarsta(varsta);
 		aplicant.setPunctaj(punctaj);
 		aplicant.DenumiriProiecte(nr, vect);
-		
-		
 	}
 }

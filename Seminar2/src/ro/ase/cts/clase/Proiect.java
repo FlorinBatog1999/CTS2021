@@ -2,7 +2,6 @@ package ro.ase.cts.clase;
 
 public class Proiect {
 	private int pragPunctaj;
-	
 
 	public Proiect(int pragPunctaj) {
 		super();
@@ -16,6 +15,5 @@ public class Proiect {
 	public void setPragPunctaj(int pragPunctaj) {
 		this.pragPunctaj = pragPunctaj;
 	}
-	
-	
+
 }
