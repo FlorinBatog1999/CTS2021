@@ -2,6 +2,8 @@ package ro.ase.cts.program;
 
 import ro.ase.cts.clase.ManagerSpital;
 import ro.ase.cts.clase.ManagerSpitalLazy;
+import ro.ase.cts.clase.Subfiliala;
+
 
 public class Main {
 
@@ -20,6 +22,17 @@ public class Main {
 		
 		System.out.println(managerLazy1.toString());
 		System.out.println(managerLazy2.toString());
+		
+		System.out.println("------------------------");
+		
+		Subfiliala subfiliala1=Subfiliala.getInstanta("BT Hunedoara", 10, 2010);
+		Subfiliala subfiliala2=Subfiliala.getInstanta("BT Resita", 5, 2015);
+		
+		subfiliala1.setAnAparitie(2012);
+		subfiliala2.setDenumire("BT Ialomita");
+		
+		System.out.println(subfiliala1.toString());
+		System.out.println(subfiliala2.toString());
 	}
 
 }
