@@ -16,6 +16,7 @@ public class ManagerSpitalLazy {
 			return instanta;
 		}
 		
+		//Constructorul la Singleton trebuie sa fie PRIVAT!
 		private ManagerSpitalLazy(String nume, int varsta, int marca) {
 			super();
 			this.nume = nume;
