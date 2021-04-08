@@ -1,0 +1,7 @@
+package ro.ase.cts.facade.clase;
+
+public class Politie {
+	public static boolean esteCautat(Persoana persoana) {
+		return Integer.parseInt(""+persoana.getCNP().charAt(12)%2)==0;
+	} 
+}
