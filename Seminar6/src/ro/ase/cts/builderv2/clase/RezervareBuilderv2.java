@@ -2,6 +2,7 @@ package ro.ase.cts.builderv2.clase;
 
 public class RezervareBuilderv2 implements BuilderAbstract{
 	//private Rezervare rezervare;
+	//pentru versiunea 2 nu se mai foloseste o instanta a clasei Rezervare
 	private int codRezervare;
 	private boolean areMancare;
 	private boolean areBautura;
@@ -45,7 +46,7 @@ public class RezervareBuilderv2 implements BuilderAbstract{
 
 
 	@Override
-	public Rezervare build() {
-		return new Rezervare(codRezervare, areMancare, areBautura, areScaunErgonomic, areMuzicaAmbientala, genMuzical);
+	public Rezervare2 build() {
+		return new Rezervare2(codRezervare, areMancare, areBautura, areScaunErgonomic, areMuzicaAmbientala, genMuzical);
 	}
 }

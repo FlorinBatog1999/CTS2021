@@ -1,13 +1,13 @@
 package ro.ase.cts.builderv2.clase;
 
-public class Rezervare {
+public class Rezervare2 {
 	private int codRezervare;
 	private boolean areMancare;
 	private boolean areBautura;
 	private boolean areScaunErgonomic;
 	private boolean areMuzicaAmbientala;
 	private String genMuzical;
-	public Rezervare(int codRezervare, boolean areMancare, boolean areBautura, boolean areScaunErgonomic,
+	public Rezervare2(int codRezervare, boolean areMancare, boolean areBautura, boolean areScaunErgonomic,
 			boolean areMuzicaAmbientala, String genMuzical) {
 		super();
 		this.codRezervare = codRezervare;

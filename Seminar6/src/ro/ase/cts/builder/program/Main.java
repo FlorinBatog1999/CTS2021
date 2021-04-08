@@ -14,6 +14,7 @@ public class Main {
 		
 		System.out.println(rezervare1.toString());
 		System.out.println(rezervare2.toString());
+		
 	
 	}
 }
