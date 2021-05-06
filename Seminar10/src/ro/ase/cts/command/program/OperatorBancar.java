@@ -16,6 +16,7 @@ public class OperatorBancar {
 		managerComenzi.executaComanda();
 		managerComenzi.invoca(new ComandaRetragere(cont, 20));
 		managerComenzi.executaComanda();
+		managerComenzi.executaComanda();
 	}
 
 }
