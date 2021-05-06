@@ -25,6 +25,8 @@ public class Masa {
 	
 	// request() din diagrama
 
+	//nu ii punem public pentru a nu permite schimbarea starii decat prin metodele ce stabilesc 
+	//comportamentul. Aceasta este diferenta majora dintre State si Strategy
 	void setStare(State stare) {
 		this.stare = stare;
 	}

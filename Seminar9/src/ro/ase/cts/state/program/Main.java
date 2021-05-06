@@ -9,6 +9,7 @@ public class Main {
 		masa.rezerva();
 		masa.ocupa();
 		//masa.rezerva();
+		
 		//masa.setStare(new Libera());
 		masa.rezerva();
 		masa.elibereaza();
