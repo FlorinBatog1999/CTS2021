@@ -1,5 +1,6 @@
 package ro.ase.cts.template.program;
 
+import ro.ase.cts.template.clase.SpectatorCuHandicap;
 import ro.ase.cts.template.clase.SpectatorUzual;
 import ro.ase.cts.template.clase.TemplateModIntrare;
 
@@ -8,7 +9,7 @@ public class Program {
 		TemplateModIntrare spectatorUzual=new SpectatorUzual("Marcel");
 		spectatorUzual.intrarePeStadion();
 		
-		TemplateModIntrare spectatorCuHandicap=new SpectatorUzual("Virgil");
+		TemplateModIntrare spectatorCuHandicap=new SpectatorCuHandicap("Virgil");
 		spectatorCuHandicap.intrarePeStadion();
 	}
 }
