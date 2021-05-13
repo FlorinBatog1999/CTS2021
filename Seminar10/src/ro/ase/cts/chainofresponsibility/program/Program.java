@@ -14,6 +14,7 @@ public class Program {
 		Cont cont3=new ContDeCredit("Andrei", 500);
 		Cont cont4=new ContIndisponibil("Andrei");
 		
+		//realizam succesiunea( lantul) de obiecte
 		cont1.setSuccesor(cont2);
 		cont2.setSuccesor(cont3);
 		cont3.setSuccesor(cont4);
