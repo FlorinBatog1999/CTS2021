@@ -30,7 +30,9 @@ public class Student {
     }
 
     public void adaugaNota(int nota){
-        note.add(nota);
+    	if(nota>=1 && nota<=10) {
+    		note.add(nota);
+    	}
     }
 
     public int getNota(int index){
