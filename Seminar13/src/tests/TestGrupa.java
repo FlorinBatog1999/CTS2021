@@ -4,19 +4,24 @@ import static org.junit.Assert.*;
 
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.experimental.categories.Category;
 
 import clase.Grupa;
 import clase.Student;
+import testscategorii.TesteGetPromovabilitate;
+import testscategorii.TesteUrgente;
 
 public class TestGrupa {
 
 	@Test
+	@Category(TesteUrgente.class)
 	public void testConstructorRight() {
 		Grupa grupa = new Grupa(1076);
 		assertEquals(1076, grupa.getNrGrupa());
 	}
 
 	@Test
+	@Category(TesteUrgente.class)
 	public void testConstructorBoundaryInf() {
 		Grupa grupa = new Grupa(1000);
 		assertEquals(1000, grupa.getNrGrupa());
@@ -24,16 +29,19 @@ public class TestGrupa {
 	}
 
 	@Test
+	@Category(TesteUrgente.class)
 	public void testConstructorBoundarySup() {
 		Grupa grupa = new Grupa(1100);
 		assertEquals(1100, grupa.getNrGrupa());
 
 	}
 	@Test(expected = IllegalArgumentException.class)
+	@Category(TesteUrgente.class)
 	public void testConstructortoError() {
 		Grupa grupa=new Grupa(1200);
 	}
 	@Test(expected = IllegalArgumentException.class)
+	@Category(TesteUrgente.class)
 	public void testConstructortoErrorSub1000() {
 		Grupa grupa=new Grupa(900);
 	}
@@ -49,12 +57,14 @@ public class TestGrupa {
 	
 	//Exist
 	@Test
+	@Category(TesteUrgente.class)
 	public void testConstructorLista() {
 		Grupa grupa=new Grupa(1076);
 		assertNotNull(grupa.getStudenti());
 	}
 	//Time-> acelasi lucru cu Performance din RIGHT-BICEP
 	@Test
+	@Category(TesteGetPromovabilitate.class)
 	public void testPromovabilitate() {
 		Grupa grupa=new Grupa(1078);
 		for(int i=0;i<7;i++) {
@@ -73,7 +83,9 @@ public class TestGrupa {
 		}
 		assertEquals(0.41, grupa.getPromovabilitate(),0.02);
 	}
+	
 	@Test
+	@Category({TesteGetPromovabilitate.class,TesteUrgente.class})
 	public void testPromovabilitateBoundaryInf() {
 		Grupa grupa=new Grupa(1076);
 		for(int i=0;i<5;i++) {
@@ -87,6 +99,7 @@ public class TestGrupa {
 	}
 	//Right
 	@Test
+	@Category({TesteGetPromovabilitate.class,TesteUrgente.class})
 	public void testPromovabilitateBoundarySup() {
 		Grupa grupa=new Grupa(1076);
 		for(int i=0;i<5;i++) {
@@ -102,6 +115,7 @@ public class TestGrupa {
 	//Inverse relation
 	//Cross-check
 	//Error
+	@Category(TesteGetPromovabilitate.class)
 	@Test(expected=IllegalArgumentException.class)
 	public void testPromovabilitateListaGoala() {
 		Grupa grupa=new Grupa(1077);
